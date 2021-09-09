@@ -1,47 +1,49 @@
 import React from "react";
-import {
-  Row,
-  Container,
-  Col,
-  Image,
-  Carousel,
-  Item,
-  Caption,
-} from "react-bootstrap";
-import image from "../images/cafeBackground.jpg";
+import imgs from "./Background.js";
+import styled from "styled-components"
+import {Carousel} from "react-bootstrap"
+
+const Styledimg = styled.img`
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    display: block;
+    
+`;
+
+const listItems = imgs.map((img) => { return (
+    <Carousel.Item interval={3000}>
+        <Styledimg
+        src={img}
+        alt="slide"
+        />
+  </Carousel.Item>
+)
+    }) 
+
+
+
 const Home = () => {
   return (
-    // <Container
-    //   style={{
-    //     minHeight: "100vh",
-    //     display: "flex",
-    //     width: "100h",
-    //     textAlign: "center",
-    //   }}
-    //   className="container-fluid no-padding"
-    // >
-    //   <Col style={{ textAlign: "center" }}>
-    //     <Row>
-    //       <p style={{ color: "red" }}>Hello</p>
-    //     </Row>
-    //   </Col>
-    // </Container>
-
-    <Carousel fade fluid>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={image}
-          alt="First slide"
-          style={{ height: "100%" }}
-        />
-        <Carousel.Caption className="justify-content-center align-middle">
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
+    // <HeroSection>
+    //     <HeroWrapper>
+    //         <Title>
+    //             Café Kuya
+    //         </Title>
+    //     </HeroWrapper>
+    // </HeroSection>)
+    <Carousel fade flex >
+  {/* <Carousel.Item>
+    <Styledimg
+      src={imgs[0]}
+      alt="First slide"
+    />
+  </Carousel.Item> */}
+  {listItems}
+</Carousel>)
 };
 
 export default Home;

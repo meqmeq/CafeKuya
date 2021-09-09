@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import Home from "./components/Home";
+import Menu from "./components/Menu"
+import Contact from "./components/Contact"
 import Navigation from "./components/Navigation";
 function App() {
   return (
     <div className="App">
       <Navigation />
-      <Home
-        style={{ minHeight: "100vh", border: "1px solid rgba(0,0,0,0.05)" }}
-      />
+      <Home/>
+      {/* <Menu/> */}
+      <Contact/>
     </div>
   );
 }
