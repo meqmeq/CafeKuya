@@ -41,12 +41,12 @@ const Contact = () => {
             
             <Row><h2>Business Hours</h2></Row>
             <Row><p>Mon:	Closed</p></Row>
-            <Row><p>Tue:	7:00 AM – 3:00 PM</p></Row>
+            <Row><p>Tue:	Closed</p></Row>
             <Row><p>Wed:	7:00 AM – 3:00 PM</p></Row>
             <Row><p>Thu:	7:00 AM – 3:00 PM</p></Row>
             <Row><p>Fri:	7:00 AM – 3:00 PM</p></Row>
             <Row><p>Sat:	9:00 AM – 4:00 PM</p></Row>
-            <Row><p>Sun:	Closed</p></Row>
+            <Row><p>Sun:	9:00 AM - 4:00 PM</p></Row>
 
             
             </Col>
